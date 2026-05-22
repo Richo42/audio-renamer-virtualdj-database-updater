@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<VBox alignment="CENTER" spacing="15" prefWidth="500" prefHeight="230"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.renamer.controller.AboutController">
+
+    <padding><Insets top="20" right="25" bottom="20" left="25"/></padding>
+
+    <!-- Título con emoji -->
+    <HBox alignment="CENTER" spacing="8" maxWidth="Infinity">
+        <FontIcon iconLiteral="fas-compact-disc" iconSize="20" fill="#333333"/>
+        <Label text="Audio Renamer - VirtualDJ Database Updater"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Versión -->
+    <Label text="Version 1.0" style="-fx-text-fill: #666666; -fx-font-size: 13px;"/>
+
+    <!-- Descripción -->
+    <Text text="Renombrado masivo de audio con sincronización de la base de datos de VirtualDJ"
+                            wrappingWidth="300.0"
+                            textAlignment="CENTER"
+                            style="-fx-fill: #555555; -fx-font-size: 13px;" />
+
+    <!-- Separador -->
+    <Label text="─────────────────────────────" style="-fx-text-fill: #dddddd;"/>
+
+    <!-- Desarrollador -->
+    <Label text="Developed by Ricardo Castillo"
+           style="-fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+    <!-- LinkedIn
+    <Hyperlink text="LinkedIn Profile"
+               onAction="#onOpenLinkedIn"
+               style="-fx-font-size: 12px; -fx-text-fill: #0077B5; -fx-cursor: hand; -fx-focus-traversable: false;"/>
+    -->
+    <!-- GitHub
+    <Hyperlink text="GitHub Repository"
+               onAction="#onOpenRepo"
+               style="-fx-font-size: 12px; -fx-text-fill: #0077B5; -fx-cursor: hand; -fx-focus-traversable: false;"/>
+    -->
+
+    <!-- LinkedIn -->
+    <HBox alignment="CENTER" spacing="8">
+        <FontIcon iconLiteral="fab-linkedin" iconSize="20" fill="#333333"/>
+        <Hyperlink text="LinkedIn Profile"
+                   onAction="#onOpenLinkedIn"
+                   style="-fx-text-fill: #0077B5; -fx-cursor: hand; -fx-focus-traversable: false;"/>
+    </HBox>
+
+    <!-- GitHub -->
+    <HBox alignment="CENTER" spacing="8">
+        <FontIcon iconLiteral="fab-github" iconSize="20" fill="#333333"/>
+        <Hyperlink text="GitHub Repository"
+                   onAction="#onOpenRepo"
+                   style="-fx-text-fill: #0077B5; -fx-cursor: hand; -fx-focus-traversable: false;"/>
+    </HBox>
+
+    <!-- Botón Cerrar -->
+    <Button text="Close" onAction="#onClose" prefWidth="100"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+
+</VBox>

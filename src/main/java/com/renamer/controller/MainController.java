@@ -8,8 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
-
 import java.io.File;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 
 public class MainController {
 
@@ -141,6 +142,34 @@ public class MainController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    /**
+     * Opens the About dialog with developer info.
+     */
+    @FXML
+    private void handleAbout() {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/about_dialog.fxml"));
+            loader.load();
+
+            AboutController controller = loader.getController();
+
+            Stage stage = new Stage();
+            stage.initModality(javafx.stage.Modality.APPLICATION_MODAL);
+            stage.initStyle(javafx.stage.StageStyle.UTILITY);
+            stage.setTitle("About Audio Renamer");
+            stage.setScene(new Scene(loader.getRoot()));
+            stage.setResizable(false);
+
+            controller.setDialogStage(stage);
+            stage.show();
+
+        } catch (Exception e) {
+            System.err.println("❌ Error opening About dialog: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
 }

@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 
 public class MainApp extends Application {
 
@@ -17,15 +19,34 @@ public class MainApp extends Application {
             // El "/" al inicio busca en la carpeta resources
             Parent root = FXMLLoader.load(getClass().getResource("/main.fxml"));
 
-            primaryStage.setTitle("Renamer - Audio File Organizer");
+            // Título de ventana
+            primaryStage.setTitle("Audio Renamer - VirtualDJ Database Updater v1.0");
+
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
+
+            // 🎨 Banner de bienvenida
+            String welcomeBanner = """
+          █████╗ ██╗   ██╗██████╗ ██╗ ██████╗     ██████╗ ███╗   ██╗███╗   ███╗███████╗██████╗ 
+         ██╔══██╗██║   ██║██╔══██╗██║██╔═══██╗    ██╔══██╗████╗  ██║████╗ ████║██╔════╝██╔══██╗
+         ███████║██║   ██║██║  ██║██║██║   ██║    ██████╔╝██╔██╗ ██║██╔████╔██║█████╗  ██████╔╝
+         ██╔══██║██║   ██║██║  ██║██║██║   ██║    ██╔══██╗██║╚██╗██║██║╚██╔╝██║██╔══╝  ██╔══██╗
+         ██║  ██║╚██████╔╝██████╔╝██║╚██████╔╝    ██║  ██║██║ ╚████║██║ ╚═╝ ██║███████╗██║  ██║
+         ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚══╝╚══╝     ╚═╝╚══════╝╚═╝  ╚═╝
+         ─────────────────────────────────[ DATABASE UPDATER ]─────────────────────────────────
+             █ ▄ █ ▄ ▄ █ ▄ █ ▄ █   |   Developed by: Ricardo Castillo   |   ▄ █ ▄ ▄ █ ▄ █  █
+        """;
+
+            System.out.println(welcomeBanner);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static void main(String[] args) {
+        // Fuerza a la consola a interpretar caracteres UTF-8
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         launch(args);
     }
 }

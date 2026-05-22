@@ -59,6 +59,20 @@
             <version>21.0.5</version>
         </dependency>
 
+        <!-- Ikonli Core -->
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-javafx</artifactId>
+            <version>12.3.1</version>
+        </dependency>
+
+        <!-- Ikonli FontAwesome Pack -->
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-fontawesome5-pack</artifactId>
+            <version>12.3.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
