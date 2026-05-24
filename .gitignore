@@ -39,6 +39,7 @@ dependency-reduced-pom.xml
 
 # --- Instaladores y ejecutables ---
 installer/
+runtime/
 *.exe
 *.msi
 
