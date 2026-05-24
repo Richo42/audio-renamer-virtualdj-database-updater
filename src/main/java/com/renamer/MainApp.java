@@ -5,16 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
         try {
+
             // Cargar el diseño visual (FXML)
             // El "/" al inicio busca en la carpeta resources
             Parent root = FXMLLoader.load(getClass().getResource("/main.fxml"));
@@ -40,6 +41,7 @@ public class MainApp extends Application {
             System.out.println(welcomeBanner);
 
         } catch (IOException e) {
+            System.err.println("❌ ERROR CRÍTICO AL CARGAR LA INTERFAZ:");
             e.printStackTrace();
         }
     }

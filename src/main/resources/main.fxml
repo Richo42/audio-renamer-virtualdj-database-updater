@@ -75,7 +75,7 @@
             </padding>
 
             <!-- Barra de Progreso -->
-            <ProgressBar fx:id="progressBar" maxWidth="1.0" progress="0.0" HBox.hgrow="ALWAYS" />
+            <ProgressBar fx:id="progressBar" maxWidth="Infinity" progress="0.0" />
 
             <!-- HBox para Estado y Crédito (misma línea) -->
             <HBox alignment="CENTER_LEFT" spacing="10.0">

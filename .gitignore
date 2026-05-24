@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 .kotlin
 
-# --- IntelliJ IDEA (Corregido) ---
+# --- IntelliJ IDEA ---
 .idea/
 *.iws
 *.iml
@@ -33,3 +33,18 @@ build/
 # --- Sistemas Operativos ---
 .DS_Store
 Thumbs.db
+
+# --- Maven Shade Plugin ---
+dependency-reduced-pom.xml
+
+# --- Instaladores y ejecutables ---
+installer/
+*.exe
+*.msi
+
+# --- Logs ---
+*.log
+
+# --- Java Crash Logs ---
+hs_err_pid*
+replay_pid*

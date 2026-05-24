@@ -6,9 +6,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-
 <?import javafx.scene.layout.HBox?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
+
 <VBox alignment="CENTER" spacing="15" prefWidth="500" prefHeight="230"
       xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.renamer.controller.AboutController">
@@ -37,17 +37,6 @@
     <!-- Desarrollador -->
     <Label text="Developed by Ricardo Castillo"
            style="-fx-font-weight: bold; -fx-text-fill: #333333;"/>
-
-    <!-- LinkedIn
-    <Hyperlink text="LinkedIn Profile"
-               onAction="#onOpenLinkedIn"
-               style="-fx-font-size: 12px; -fx-text-fill: #0077B5; -fx-cursor: hand; -fx-focus-traversable: false;"/>
-    -->
-    <!-- GitHub
-    <Hyperlink text="GitHub Repository"
-               onAction="#onOpenRepo"
-               style="-fx-font-size: 12px; -fx-text-fill: #0077B5; -fx-cursor: hand; -fx-focus-traversable: false;"/>
-    -->
 
     <!-- LinkedIn -->
     <HBox alignment="CENTER" spacing="8">
