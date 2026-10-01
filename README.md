@@ -321,10 +321,5 @@ Distribuido bajo licencia MIT.
 
 ---
 
-## 📬 Contacto
-
-¿Problemas o sugerencias? Abre un *Issue* en GitHub o contáctame en `[TU_EMAIL]`.
-
----
 
 > **Nota:** Este proyecto es de código abierto. Si te ahorra tiempo organizando tu biblioteca de DJ, considera darle una ⭐ en GitHub.
